@@ -1,0 +1,483 @@
+#Lecture {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#Lecture > main {
+    display: flex;
+}
+
+#Lecture > main > section {
+    flex: 1;
+    padding: 20px;
+}
+
+#Lecture > main > section > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Lecture > main > section > div > nav {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#Lecture > main > section > div > nav:hover > div {
+    display: flex;
+}
+
+#Lecture > main > section > div > nav > aside {
+    display: flex;
+    align-items: center;
+}
+
+#Lecture > main > section > div > nav > aside > img {
+    width: 30px;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+#Lecture > main > section > div > nav > aside > p {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+#Lecture > main > section > div > nav > aside > p > i {
+    margin-left: 3px;
+}
+
+#Lecture > main > section > div > nav > div {
+    background-color: #fff;
+    position: absolute;
+    width: 200px;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 10px 0px 10px 20px;
+    min-height: 100px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+#Lecture > main > section > div > nav > div > h4 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 2px;
+}
+
+#Lecture > main > section > div > nav > div > h4 > i {
+    margin-right: 10px;
+}
+
+#Lecture > main > section > div > nav > div > h4:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#Lecture > main > section > div > nav > div > a {
+    text-decoration: none;
+}
+
+#Lecture > main > section > div > nav > div > a p {
+    color: red;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 2px;
+}
+
+#Lecture > main > section > div > nav > div > a p > i {
+    margin-right: 10px;
+}
+
+#Lecture > main > section > div > nav > div > a p:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#Lecture > main > section > p {
+    padding-top: 25px;
+    color: #134544;
+}
+
+#Lecture > main > section > p > i {
+    margin-right: 5px;
+}
+
+#Lecture > main > section > h4 {
+    margin-top: 30px;
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    font-size: 1.3rem;
+    color: #162168;
+}
+
+#Lecture > main > section > nav {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#Lecture > main > section > nav > span {
+    display: block;
+    background-color: #134544;
+    width: 45px;
+    height: 10px;
+    border-radius: 20px;
+}
+
+#Lecture > main > section > nav > p {
+    font-size: 1.1rem;
+}
+
+#Lecture > main > section > li {
+    list-style-type: none;
+    content: #162168;
+    margin-left: 55px;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+#Lecture > main > section > .lecture-content {
+    margin-top: 30px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#Lecture > main > section > .lecture-content > h4 {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding: 30px;
+}
+
+#Lecture > main > section > .lecture-content > .courses {
+    padding: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+#Lecture > main > section > .lecture-content > .courses > p {
+    padding: 15px 20px;
+    color: #134544;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    border-radius: 5px;
+    background-color: rgba(19, 69, 68, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+#Lecture > main > section > .lecture-content > .courses > p:hover {
+    background-color: rgb(174, 138, 224);
+    border-color: rgb(174, 138, 224);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#Lecture > main > section > .lecture-content > .courses > p:active {
+    background-color: #134544;
+    color: #fff;
+    transform: translateY(0);
+}
+
+#Lecture > footer {
+    color: #007bff;
+    font-size: 13px;
+    margin-top: 50px;
+    border-top: 1px solid rgb(205, 199, 199);
+}
+
+#Lecture > footer > p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#Lecture > footer > p > span {
+    padding-right: 5px;
+    font-size: 1rem;
+}
+
+/* Video Modal Styles */
+.video-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.video-modal {
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.video-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 30px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+}
+
+.video-modal-title-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #162168;
+    margin-bottom: 8px;
+}
+
+.video-modal-description {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.video-modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    line-height: 1;
+}
+
+.video-modal-close:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #134544;
+}
+
+.video-modal-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: black;
+}
+
+.video-modal-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.video-modal-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 14px;
+}
+
+.prev-btn {
+    color: #134544;
+    background-color: transparent;
+    border: 2px solid #134544;
+}
+
+.prev-btn:hover {
+    background-color: #134544;
+    color: white;
+}
+
+.next-btn {
+    background-color: #134544;
+    color: white;
+    border: 2px solid #134544;
+}
+
+.next-btn:hover {
+    background-color: #0f3736;
+    border-color: #0f3736;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Lecture > main > section > .lecture-content > .courses {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+     #Lecture > main > section > .lecture-content{
+        border: 1px solid #abc1ed;
+        width: 85%;
+        margin-left: 25px;
+        padding-top: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+     }
+
+    #Lecture > main > section > .lecture-content > .courses > p {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .video-modal {
+        max-width: 95%;
+        margin: 10px;
+    }
+
+    .video-modal-header {
+        padding: 20px;
+    }
+
+    .video-modal-title-section h3 {
+        font-size: 18px;
+    }
+
+    .video-modal-footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .video-modal-btn {
+        width: 100%;
+    }
+
+    #Lecture > footer{
+        margin-top: 20px;
+    }
+
+    #Lecture > footer > p{
+        text-align: start;
+        padding-left: 20px;
+    }
+    #Lecture > main > section > div > nav > aside > p > span{
+        display: none;
+    }
+    #Lecture > main > section > div{
+        background-color: #134544;
+        /* height: 10vh; */
+        padding: 20px;
+        margin-bottom: 0;
+    }
+
+     #Lecture > main > section > div > i, #Lecture > main > section > div > nav > aside > p > i {
+        color: #ffffff;
+     }
+
+    #go{
+        display: none;
+    }
+    #Lecture > main > section > h4{
+        margin: 0;
+        border-bottom: 0.5px solid #bfc2d8;
+        background-color: #e5e7eb;
+        padding: 20px;
+        font-size: 17px;
+    }
+    #Lecture > main > section > nav{
+        padding: 20px;
+        padding-bottom: 5px;
+        
+    }
+     #Lecture > main > section > nav > span{
+        width: 30px;
+        height: 7px;
+     }
+      #Lecture > main > section > nav > p{
+         color: #3B3D55;
+                
+     }
+      #Lecture > main > section > li{
+        font-size: 14px;
+        color: #162168;
+        padding-left: 5px;
+      }
+      #Lecture > main{
+        background-color: #fff;
+      }
+      #Lecture{
+        background-color: #fff;
+      }
+      #Lecture > main > section > .lecture-content h4{
+        border-bottom: none;
+      }
+
+   
+   
+
+    
+
+}
+
+
+@media (max-width: 480px) {
+    #Lecture > main > section > .lecture-content > .courses {
+        grid-template-columns: 1fr;
+    }
+
+    #Lecture > main > section {
+        padding: 0;
+    }
+
+    #Lecture > main > section > .lecture-content > .courses {
+        padding: 20px;
+    }
+
+    .video-modal-overlay {
+        padding: 10px;
+    }
+    
+}
