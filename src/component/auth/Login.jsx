@@ -34,26 +34,34 @@ function Login() {
             <img src={logo} alt="geestack" />
             <form  onSubmit={LoggedIn}>
                 <legend>Login</legend>
-                <nav>
+                <div>
                     <label htmlFor="email">Email</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                    <input 
+                        id="email"
+                        type="email" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)}
                     />
-                </nav>
+                </div>
 
-                <nav>
+                <div>
                     <div>
                         <label htmlFor="password">Password</label>
                         <p>Forgotten password?</p>
                     </div>
-                    <input type="password" value={password}  onChange={(e) => setPassword(e.target.value)}
+                    <input 
+                        id="password"
+                        type="password" 
+                        value={password}  
+                        onChange={(e) => setPassword(e.target.value)}
                     />
-                </nav>
+                </div>
 
-                <nav>
-                   <button type="submit">
+                <div>
+                   <button type="submit" disabled={loading}>
                      {loading ? "Logging in..." : "Login"}
                    </button>
-                </nav>
+                </div>
             </form>
              <li>Doesn't have an account <Link to ="/Signup">Sign Up</Link></li>
             <p>Copyright &copy; geegstack academy 2022</p>

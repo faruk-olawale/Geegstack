@@ -8,22 +8,22 @@ function Signup() {
             <img src={logo} alt="geestack" />
             <form >
                 <legend>Signup</legend>
-                <nav>
+                <div>
                     <label htmlFor="email">Email</label>
                     <input type="email" />
-                </nav>
+                </div>
 
-                <nav>
+                <div>
                     <div>
                         <label htmlFor="password">Password</label>
                         <p>Forgotten password?</p>
                     </div>
                     <input type="password" />
-                </nav>
+                </div>
 
-                <nav>
+                <div>
                     <Link to="/"> <button>Signup</button></Link>
-                </nav>
+                </div>
             </form>
             <li>Already have an Account <Link to ="/">Login</Link></li>
             <p>Copyright &copy; geegstack academy 2022</p>
