@@ -175,13 +175,14 @@
 
 @media (max-width: 700px) {
     #challenges{
+        background-color: #fff;
        >main{
          >section{
             padding: 0;
            >div{
             background-color: #134544;
             height: 10vh;
-            padding: 20px;
+            padding: 30px;
             >i{
                 color: #fff;
             }
@@ -200,11 +201,12 @@
            } 
            >h4{
             margin-top: 0;
-            padding: 20px;
+            padding: 30px;
             border-bottom: 0.5px solid #bfc2d8;
            }
            >nav{
-             padding: 20px;
+             padding: 30px;
+             padding-bottom: 10px;
             >span{
                 width: 30px;
                 height: 7px;
@@ -217,6 +219,7 @@
            >li{
             margin-bottom: 20px;
             color: #162168;
+            padding-right: 20px;
            } 
            >aside{
             flex-direction: column;
@@ -241,14 +244,32 @@
                 }
             }
            } 
+           #p{
+            display: none;
+           }
+           .container{ 
+            background-color: #fff;
+            min-height: 100vh;
+            margin: 15px;
+            width: 95%;
+            > section{
+            height: 50vh;
+            border: 1px solid #bfc2d8;
+            background-color: rgba(101, 164, 231, 0.1);
+            padding: 55px;
+           }
+           >p{
+             background-color: rgba(0, 0, 0, 0.1);
+             min-height: 55vh;
+           }
+           }
         }
        }
        >footer{
-        /* margin-top: 10px; */
        >p{
         text-align: start;
         padding-left: 20px;
-       } 
-    }
+        } 
+     }
     }
 }

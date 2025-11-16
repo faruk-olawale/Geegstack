@@ -27,7 +27,7 @@ const Challenges = () => {
                     </div>
                 </nav>
                 </div>
-                <p><i class="fa-solid fa-arrow-left"></i>Go Back</p>
+                <p id="p"><i class="fa-solid fa-arrow-left"></i>Go Back</p>
                  <h4>Challenges</h4>
                  <nav>
                     <span></span>
