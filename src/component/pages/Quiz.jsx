@@ -14,8 +14,8 @@ const Quiz = () => {
                 <nav>
                     <aside>
                         <img src={User} alt="user Profile" />
-                        <p>
-                           Hi, Ismail
+                        <p id="p">
+                           <span>Hi, Ismail</span>
                             <i class="fa-solid fa-caret-down"></i>
                         </p>
                     </aside>

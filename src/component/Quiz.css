@@ -122,13 +122,131 @@
 
 
 @media (max-width: 500px) {
-    #Quiz{
-        >main{
-            >section{
-                >#last-two{
-                    >h1{
-                        font-size: 1rem;
+    #Quiz {
+        background-color: #fff;
+        overflow-x: hidden;
+        
+        >main {
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            width: 100%;
+            
+            /* Hide desktop navbar on mobile */
+            >nav {
+                display: none;
+            }
+            
+            >section {
+                flex: 1;
+                padding: 0 !important;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                width: 100%;
+                overflow-x: hidden;
+                
+                >div:first-child {
+                    background-color: #134544;
+                    padding: 15px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 15px;
+                    
+                    >i {
+                        color: #fff;
+                        font-size: 1.3rem;
+                        cursor: pointer;
                     }
+                    
+                    >nav {
+                        >aside {
+                            >img {
+                                width: 30px;
+                                border-radius: 30px;
+                            }
+                            
+                            >p {
+                                color: #fff;
+                                font-size: 0.9rem;
+                                >span{
+                                    display: none;
+                                }
+                                
+                                >i {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        
+                        >div {
+                            right: 0;
+                            margin-right: 10px;
+                            width: 180px;
+                        }
+                    }
+                }
+                
+                >#last-two {
+                    background-color: #fff;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 40px 20px !important;
+                    width: 100%;
+                    box-sizing: border-box;
+                    overflow-x: hidden;
+                    
+                    >h1 {
+                        font-size: 2rem;
+                        color: #162168;
+                        margin: 0;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        word-break: break-word;
+                        max-width: 90%;
+                    }
+                    
+                    >p {
+                        font-size: 0.9rem;
+                        text-align: center;
+                        padding: 10px 0;
+                        color: #333;
+                        line-height: 1.4;
+                        max-width: 90%;
+                    }
+                    
+                    a {
+                        color: #717cf4;
+                        font-size: 1rem;
+                        padding-top: 10px;
+                        text-decoration: none;
+                        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        
+        >footer {
+            background-color: #fff;
+            border-top: 1px solid rgb(205, 199, 199);
+            margin-top: 0;
+            
+            >p {
+                font-size: 13px;
+                padding: 20px 10px;
+                text-align: center;
+                color: #007bff;
+                
+                >span {
+                    padding-right: 5px;
+                    font-size: 1rem;
                 }
             }
         }

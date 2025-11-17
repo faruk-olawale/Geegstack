@@ -201,11 +201,11 @@
            } 
            >h4{
             margin-top: 0;
-            padding: 30px;
+            padding: 20px;
             border-bottom: 0.5px solid #bfc2d8;
            }
            >nav{
-             padding: 30px;
+             padding: 20px;
              padding-bottom: 10px;
             >span{
                 width: 30px;
@@ -213,13 +213,15 @@
                 >p{
                     color: #3B3D55;
                     font-size: 14px;
+                    font-weight: 900;
                 }
             }
            }
            >li{
             margin-bottom: 20px;
             color: #162168;
-            padding-right: 20px;
+            padding-left: 5px;
+            margin-left: 0;
            } 
            >aside{
             flex-direction: column;
