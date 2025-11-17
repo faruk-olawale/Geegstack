@@ -81,7 +81,7 @@ const Lecture = () => {
         <div id="Lecture">
             <main>
             <Navbar></Navbar>
-            <section>
+            <section id="section">
                 <div>
                   <section> 
                 <i class="fa-solid fa-bars"></i>

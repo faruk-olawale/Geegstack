@@ -124,7 +124,7 @@
 
 
 
-@media (max-width: 850px) {
+@media (max-width: 500px) {
     #Quiz {
         background-color: #fff;
         overflow-x: hidden;
@@ -152,7 +152,7 @@
                 >div:first-child {
                     background-color: #134544;
                     padding: 15px 20px;
-                    display: flex;
+                    /* display: flex; */
                     justify-content: space-between;
                     align-items: center;
                     gap: 15px;
@@ -260,3 +260,4 @@
         }
     }
 }
+

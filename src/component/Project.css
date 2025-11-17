@@ -155,19 +155,4 @@
             }
         }
     }
-    >footer{
-                color: #007bff;
-                font-size: 13px;
-                margin-top: 50px;
-                border-top: 1px solid rgb(205, 199, 199);
-                >p{
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    text-align: center;
-                    >span{
-                        padding-right: 5px;
-                        font-size: 1rem;
-                    }
-                }
-            }
 }
