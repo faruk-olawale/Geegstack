@@ -27,7 +27,7 @@ const Quiz = () => {
             <section>
                 <div>
                  <section> 
-                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
                 <i className="fa-solid fa-magnifying-glass" id="search"></i> 
                 </section>  
                 <nav>
