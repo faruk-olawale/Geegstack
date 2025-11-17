@@ -20,8 +20,7 @@ function Login() {
         setLoading(true);
         setTimeout(() => {
             console.log("Logging in with:", email, password);
-            
-            
+              
             localStorage.setItem("userEmail", email);
             
             setLoading(false);

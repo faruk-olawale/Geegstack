@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Navbar from "../Navbar"
 import "../Lecture.css"
 import User from "../../assets/user.png"
@@ -7,8 +7,19 @@ import { Link } from "react-router-dom"
 const Lecture = () => {
     const [selectedCourse, setSelectedCourse] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [firstName, setFirstName] = useState("Ismail")
 
-    // Course data with video URLs
+    useEffect(() => {
+        const userEmail = localStorage.getItem("userEmail")
+        
+        if (userEmail) {
+            const emailPrefix = userEmail.split("@")[0]
+            const name = emailPrefix.split(".")[0]
+            
+            const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1)
+            setFirstName(capitalizedName)
+        }
+    }, [])
     const courseData = {
         'Introduction': {
             title: 'Introduction to Web Development',
@@ -91,7 +102,7 @@ const Lecture = () => {
                     <aside>
                         <img src={User} alt="user Profile" />
                         <p>
-                           <span>Hi, Ismail</span>
+                           <span>Hi, {firstName}</span>
                             <i className="fa-solid fa-caret-down"></i>
                         </p>
                     </aside>
@@ -107,7 +118,7 @@ const Lecture = () => {
                  <h4 id="lectures">Lectures</h4>
                  <nav>
                     <span id="span"></span>
-                    <p>Hi, Welcome, Ismail!</p>
+                    <p>Hi, Welcome, {firstName}!</p>
                  </nav>
                  <li>What would you like to do now?</li>
 

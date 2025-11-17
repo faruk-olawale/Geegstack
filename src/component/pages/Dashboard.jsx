@@ -8,14 +8,12 @@ const Dashboard = () => {
     const [firstName, setFirstName] = useState("Ismail")
 
     useEffect(() => {
-        // Get email from localStorage (or wherever you store it after login)
         const userEmail = localStorage.getItem("userEmail")
         
         if (userEmail) {
             const emailPrefix = userEmail.split("@")[0]
             const name = emailPrefix.split(".")[0]
             
-            // Capitalize first letter
             const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1)
             setFirstName(capitalizedName)
         }

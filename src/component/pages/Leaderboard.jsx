@@ -2,7 +2,22 @@ import Navbar from "../Navbar"
 import "../Leaderboard.css"
 import User from "../../assets/user.png"
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
 const Leaderboard = () => {
+
+       const [firstName, setFirstName] = useState("Ismail")
+    
+        useEffect(() => {
+        const userEmail = localStorage.getItem("userEmail")
+            
+        if (userEmail) {
+                const emailPrefix = userEmail.split("@")[0]
+                const name = emailPrefix.split(".")[0]
+                
+                const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1)
+                setFirstName(capitalizedName)
+            }
+        }, [])
 
     return(
         <div id="Leaderboard">
@@ -14,7 +29,7 @@ const Leaderboard = () => {
                     <aside>
                         <img src={User} alt="user Profile" />
                         <p>
-                           Hi, Ismail
+                           Hi, {firstName}
                             <i class="fa-solid fa-caret-down"></i>
                         </p>
                     </aside>
