@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 
 const Dashboard = () => {
     const [firstName, setFirstName] = useState("Ismail")
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false)
 
     useEffect(() => {
         const userEmail = localStorage.getItem("userEmail")
@@ -19,14 +20,32 @@ const Dashboard = () => {
         }
     }, [])
 
+    const toggleNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen)
+    }
+
+    const closeNavbar = () => {
+        setIsNavbarOpen(false)
+    }
+
     return(
         <div id="Dashboard">
+            {/* Overlay */}
+            {isNavbarOpen && (
+                <div 
+                    className="navbar-overlay"
+                    onClick={closeNavbar}
+                ></div>
+            )}
+
             <main>
-            <Navbar></Navbar>
+            <div className={`navbar-wrapper ${isNavbarOpen ? 'navbar-open' : ''}`}>
+                <Navbar />
+            </div>
             <section>
             <div>
                 <section> 
-                <i className="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars" onClick={toggleNavbar}></i>
                 <i className="fa-solid fa-magnifying-glass" id="search"></i> 
                 </section>  
                 <nav>

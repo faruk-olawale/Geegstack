@@ -277,3 +277,46 @@
     }
     }
 }
+
+/* Desktop - navbar wrapper does nothing, just passes through */
+.navbar-wrapper {
+    display: contents; /* This makes the wrapper invisible on desktop */
+}
+
+.navbar-overlay {
+    display: none;
+}
+
+/* Mobile Navbar Wrapper Styles */
+@media (max-width: 700px) {
+    .navbar-wrapper {
+        display: block; /* Enable wrapper on mobile */
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .navbar-wrapper.navbar-open {
+        left: 0;
+    }
+
+    .navbar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+}
+
+

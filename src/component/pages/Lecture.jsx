@@ -8,6 +8,7 @@ const Lecture = () => {
     const [selectedCourse, setSelectedCourse] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [firstName, setFirstName] = useState("Ismail")
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false) // ✅ ADD THIS LINE
 
     useEffect(() => {
         const userEmail = localStorage.getItem("userEmail")
@@ -20,6 +21,15 @@ const Lecture = () => {
             setFirstName(capitalizedName)
         }
     }, [])
+
+    const toggleNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen)
+    }
+
+    const closeNavbar = () => {
+        setIsNavbarOpen(false)
+    }
+
     const courseData = {
         'Introduction': {
             title: 'Introduction to Web Development',
@@ -90,62 +100,71 @@ const Lecture = () => {
 
     return(
         <div id="Lecture">
+            {isNavbarOpen && (
+                <div 
+                    className="navbar-overlay"
+                    onClick={closeNavbar}
+                ></div>
+            )}
+            
             <main>
-            <Navbar></Navbar>
-            <section id="section">
-                <div>
-                  <section> 
-                <i class="fa-solid fa-bars"></i>
-                <i className="fa-solid fa-magnifying-glass" id="search"></i> 
-                </section> 
-                <nav>
-                    <aside>
-                        <img src={User} alt="user Profile" />
-                        <p>
-                           <span>Hi, {firstName}</span>
-                            <i className="fa-solid fa-caret-down"></i>
-                        </p>
-                    </aside>
-                    <div>
-                        <h4><i className="fa-solid fa-user"></i> Profile</h4>
-                        <Link to="/">
-                        <p><i className="fa-solid fa-right-from-bracket"></i>Logout</p>
-                        </Link>
-                    </div>
-                </nav>
+                <div className={`navbar-wrapper ${isNavbarOpen ? 'navbar-open' : ''}`}>
+                    <Navbar />
                 </div>
-                <p id="go"><i className="fa-solid fa-arrow-left"></i>Go Back</p>
-                 <h4 id="lectures">Lectures</h4>
-                 <nav>
-                    <span id="span"></span>
-                    <p>Hi, Welcome, {firstName}!</p>
-                 </nav>
-                 <li>What would you like to do now?</li>
-
-                 <div className="lecture-content">
-                  <h4>Learning Path</h4>
-                    <div className="courses">
-                     <p onClick={() => handleCourseClick('Introduction')}>Introduction</p>
-                     <p onClick={() => handleCourseClick('HTML')}>HTML</p>
-                     <p onClick={() => handleCourseClick('CSS')}>CSS</p>
-                     <p onClick={() => handleCourseClick('Javascript')}>Javascript</p>
-                     <p onClick={() => handleCourseClick('React')}>React</p>
-                     <p onClick={() => handleCourseClick('Git & Github')}>Git & Github</p>
-                     <p onClick={() => handleCourseClick('NodeJS')}>NodeJS</p>
-                     <p onClick={() => handleCourseClick('Express JS Basics')}>Express JS Basics</p>
-                     <p onClick={() => handleCourseClick('MongoDB')}>MongoDB</p>
-                     <p onClick={() => handleCourseClick('Web Hosting')}>Web Hosting</p>
-                     <p onClick={() => handleCourseClick('ExpressJS (cont\'d)')}>ExpressJS (cont'd)</p>
+                
+                <section id="section">
+                    <div>
+                        <section> 
+                            <i className="fa-solid fa-bars" onClick={toggleNavbar}></i>
+                            <i className="fa-solid fa-magnifying-glass" id="search"></i> 
+                        </section> 
+                        <nav>
+                            <aside>
+                                <img src={User} alt="user Profile" />
+                                <p>
+                                    <span>Hi, {firstName}</span>
+                                    <i className="fa-solid fa-caret-down"></i>
+                                </p>
+                            </aside>
+                            <div>
+                                <h4><i className="fa-solid fa-user"></i> Profile</h4>
+                                <Link to="/">
+                                    <p><i className="fa-solid fa-right-from-bracket"></i>Logout</p>
+                                </Link>
+                            </div>
+                        </nav>
                     </div>
-                 </div>
-     
-            </section>
+                    <p id="go"><i className="fa-solid fa-arrow-left"></i>Go Back</p>
+                    <h4 id="lectures">Lectures</h4>
+                    <nav>
+                        <span id="span"></span>
+                        <p>Hi, Welcome, {firstName}!</p>
+                    </nav>
+                    <li>What would you like to do now?</li>
+
+                    <div className="lecture-content">
+                        <h4>Learning Path</h4>
+                        <div className="courses">
+                            <p onClick={() => handleCourseClick('Introduction')}>Introduction</p>
+                            <p onClick={() => handleCourseClick('HTML')}>HTML</p>
+                            <p onClick={() => handleCourseClick('CSS')}>CSS</p>
+                            <p onClick={() => handleCourseClick('Javascript')}>Javascript</p>
+                            <p onClick={() => handleCourseClick('React')}>React</p>
+                            <p onClick={() => handleCourseClick('Git & Github')}>Git & Github</p>
+                            <p onClick={() => handleCourseClick('NodeJS')}>NodeJS</p>
+                            <p onClick={() => handleCourseClick('Express JS Basics')}>Express JS Basics</p>
+                            <p onClick={() => handleCourseClick('MongoDB')}>MongoDB</p>
+                            <p onClick={() => handleCourseClick('Web Hosting')}>Web Hosting</p>
+                            <p onClick={() => handleCourseClick('ExpressJS (cont\'d)')}>ExpressJS (cont'd)</p>
+                        </div>
+                    </div>
+                </section>
             </main>
+            
             <footer>
                 <p><span>.</span> Geegstack Academy</p>
             </footer>
 
-            {/* Video Modal */}
             {showModal && selectedCourse && (
                 <div className="video-modal-overlay" onClick={closeModal}>
                     <div className="video-modal" onClick={(e) => e.stopPropagation()}>
