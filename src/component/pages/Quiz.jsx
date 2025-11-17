@@ -10,7 +10,11 @@ const Quiz = () => {
             <main>
             <Navbar></Navbar>
             <section>
-                <div><i class="fa-solid fa-bars"></i>
+                <div>
+                 <section> 
+                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-magnifying-glass" id="search"></i> 
+                </section>  
                 <nav>
                     <aside>
                         <img src={User} alt="user Profile" />

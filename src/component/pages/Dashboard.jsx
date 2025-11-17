@@ -10,7 +10,10 @@ const Dashboard = () => {
             <Navbar></Navbar>
             <section>
             <div>
+                <section> 
                 <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-magnifying-glass" id="search"></i> 
+                </section>  
                 <nav>
                     <aside>
                         <img src={User} alt="user Profile" />
@@ -60,7 +63,7 @@ const Dashboard = () => {
                             <h4>Go to Forum</h4>
                             <p>Visit the academy forum to join discussion or ask a 
                                 question and get help from co-learners</p>
-                            <Link to="/">Visit Forum<i class="fa-solid fa-chevron-right"></i></Link> 
+                            <Link>Visit Forum<i class="fa-solid fa-chevron-right"></i></Link> 
                         </div>
                     </div>
                     <div>

@@ -83,7 +83,10 @@ const Lecture = () => {
             <Navbar></Navbar>
             <section>
                 <div>
-                <i className="fa-solid fa-bars"></i>
+                  <section> 
+                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-magnifying-glass" id="search"></i> 
+                </section> 
                 <nav>
                     <aside>
                         <img src={User} alt="user Profile" />

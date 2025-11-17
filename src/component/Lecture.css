@@ -16,6 +16,9 @@
     justify-content: space-between;
     align-items: center;
 }
+ #search{
+        display: none;
+         }
 
 #Lecture > main > section > div > nav {
     display: flex;
@@ -413,8 +416,16 @@
         margin-bottom: 0;
     }
 
-     #Lecture > main > section > div > i, #Lecture > main > section > div > nav > aside > p > i {
-        color: #ffffff;
+     #Lecture > main > section > div > section{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           gap: 2rem;
+     }
+      #Lecture > main > section > div > section > i, #Lecture > main > section > div > nav > aside > p > i {
+         color: #fff;
+         font-size: 1.1rem;
+         cursor: pointer;
      }
 
     #go{

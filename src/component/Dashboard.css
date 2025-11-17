@@ -10,6 +10,9 @@
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+                  >#search{
+                    display: none;
+                 }
                  >nav{
                   display: flex;
                   flex-direction: column;
@@ -193,9 +196,18 @@
             background-color: #134544;
             height: 10vh;
             padding: 20px;
-            >i{
-                color: #fff;
-            }
+
+              >section{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem;
+                 >i {
+                 color: #fff;
+                 font-size: 1.1rem;
+                 cursor: pointer;
+                    }
+                }
             >nav{
                 >aside{
                     >p{

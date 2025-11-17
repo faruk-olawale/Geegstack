@@ -9,6 +9,9 @@
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+                  >#search{
+                  display: none;
+                   }
                  >nav{
                   display: flex;
                   flex-direction: column;
@@ -153,11 +156,16 @@
                     justify-content: space-between;
                     align-items: center;
                     gap: 15px;
-                    
+                    >section{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 2rem;
                     >i {
                         color: #fff;
-                        font-size: 1.3rem;
+                        font-size: 1.1rem;
                         cursor: pointer;
+                    }
                     }
                     
                     >nav {

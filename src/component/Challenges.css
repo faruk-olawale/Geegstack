@@ -9,6 +9,9 @@
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
+                 #search{
+                    display: none;
+                 }
                  >nav{
                   display: flex;
                   flex-direction: column;
@@ -183,9 +186,17 @@
             background-color: #134544;
             height: 10vh;
             padding: 30px;
-            >i{
-                color: #fff;
-            }
+             >section{
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             gap: 2rem;
+              >i {
+              color: #fff;
+              font-size: 1.1rem;
+              cursor: pointer;
+                    }
+                 }
             >nav{
                 >aside{
                     >p{
@@ -221,7 +232,7 @@
             margin-bottom: 20px;
             color: #162168;
             padding-left: 5px;
-            margin-left: 0;
+            margin-left: 20px;
            } 
            >aside{
             flex-direction: column;
