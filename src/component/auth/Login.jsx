@@ -11,22 +11,23 @@ function Login() {
    const navigate = useNavigate(); 
 
     function LoggedIn(e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    if (!email.trim() || !password.trim()) {
-        alert("Both email and password are required.");
-        return;
+        if (!email.trim() || !password.trim()) {
+            alert("Both email and password are required.");
+            return;
+        }
+        setLoading(true);
+        setTimeout(() => {
+            console.log("Logging in with:", email, password);
+            
+            
+            localStorage.setItem("userEmail", email);
+            
+            setLoading(false);
+            navigate("/Dashboard"); 
+        }, 2000);
     }
-    setLoading(true);
-    setTimeout(() => {
-    console.log("Logging in with:", email, password);
-    setLoading(false);
-    navigate("/Dashboard"); 
-    }, 2000);
- }
-
-
-    
 
     return(
         <div id="auth">
