@@ -431,6 +431,9 @@
     #go{
         display: none;
     }
+    #search{
+        display: block;
+    }
     #Lecture > main > section > h4{
         margin: 0;
         border-bottom: 0.5px solid #bfc2d8;

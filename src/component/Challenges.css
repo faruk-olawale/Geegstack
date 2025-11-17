@@ -196,6 +196,9 @@
               font-size: 1.1rem;
               cursor: pointer;
                     }
+                >#search{
+                    display: block;
+                }    
                  }
             >nav{
                 >aside{
