@@ -109,11 +109,12 @@
     border-radius: 5px;
 }
 
-#Lecture > main > section > div > nav > div > h4 {
+#Lecture > main > section > div > nav > div > a {
     display: flex;
     align-items: center;
     cursor: pointer;
     padding: 10px 2px;
+    color: #000;
 }
 
 #Lecture > main > section > div > nav > div > h4 > i {

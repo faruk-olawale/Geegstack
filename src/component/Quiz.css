@@ -49,11 +49,12 @@
                     flex-direction: column;
                     justify-content: space-between;
                     border-radius: 5px;
-                    >h4{
+                    >a{
                         display: flex;
                         align-items: center;
                         cursor: pointer;
                         padding: 10px 2px;
+                        color: #000;
                         i{
                             margin-right: 10px;
                         }

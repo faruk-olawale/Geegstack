@@ -55,7 +55,7 @@ const Project = () => {
                         </p>
                     </aside>
                     <div>
-                        <h4><i class="fa-solid fa-user"></i> Profile</h4>
+                         <Link to="/Profile"><i className="fa-solid fa-user"></i> Profile</Link>
                         <Link to="/">
                         <p><i class="fa-solid fa-right-from-bracket"></i>Logout</p>
                         </Link>

@@ -127,7 +127,7 @@ const Lecture = () => {
                                 </p>
                             </aside>
                             <div>
-                                <h4><i className="fa-solid fa-user"></i> Profile</h4>
+                                <Link to="/Profile"><i className="fa-solid fa-user"></i> Profile</Link>
                                 <Link to="/">
                                     <p><i className="fa-solid fa-right-from-bracket"></i>Logout</p>
                                 </Link>

@@ -8,6 +8,7 @@ import Submission from "./component/pages/Submission";
 import Leaderboard from "./component/pages/Leaderboard";
 import Challenges from "./component/pages/Challenges";
 import Project from "./component/pages/Project";
+import Profile from "./component/pages/Profile";
 
 
 
@@ -25,7 +26,8 @@ function App() {
         <Route path='/Submission' element={<Submission />} />
         <Route path='/Leaderboard' element={<Leaderboard />} />
         <Route path='/Challenges' element={<Challenges />} />
-         <Route path='/Project' element={<Project />} />
+        <Route path='/Project' element={<Project />} />
+        <Route path='/Profile' element={<Profile />} />
       </Routes>
     </BrowserRouter>
 
