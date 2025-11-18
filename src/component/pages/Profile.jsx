@@ -112,7 +112,7 @@ const Profile = () => {
                         </div>
 
                         <div className="profile-bio">
-                            <p>Ismail is a Full stack Development Student at Geegstack Academy.</p>
+                            <p>{firstName} is a Full stack Development Student at Geegstack Academy.</p>
                         </div>
                     </div>
 
@@ -149,7 +149,6 @@ const Profile = () => {
                                         type="email" 
                                         defaultValue="1234568u88@gmail.com" 
                                         placeholder="Email"
-                                        disabled
                                     />
                                 </div>
                                 <div className="form-group">

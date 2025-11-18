@@ -477,7 +477,7 @@
         background-color: #134544;
         padding: 20px;
         margin-bottom: 0;
-        position: sticky;
+        /* position: sticky; */
         top: 0;
         z-index: 100;
     }
