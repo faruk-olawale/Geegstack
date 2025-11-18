@@ -71,14 +71,12 @@
     }
 }
 
-/* Change the media query at the bottom from */
 @media (max-width: 500px) {
     #navbar {
         display: none;
     }
 }
 
-/* TO THIS: */
 @media (max-width: 700px) {
     #navbar {
         display: flex;

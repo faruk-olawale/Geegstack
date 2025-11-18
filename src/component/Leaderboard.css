@@ -1,204 +1,510 @@
-
-#Leaderboard{
+#Leaderboard {
     background-color: rgba(0, 0, 0, 0.1);
-    >main{
-        display: flex;
-        >section{
-            flex: 1;
-            padding: 20px;
-            >div{
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 >nav{
-                  display: flex;
-                  flex-direction: column;
-                  cursor: pointer;
-                  &:hover >div{
-                    display: flex;
-                  }
-                 >aside{
-                    display: flex;
-                    align-items: center;
-                        >img{
-                            width: 30px;
-                            border-radius: 30px;
-                            margin-right: 5px;
-                        }
-                        >p{
-                            display: flex;
-                            align-items: center;
-                            font-weight: 500;
-                            >i{
-                                margin-left: 3px;
-                            }
-                        }
-                        }
-                        >div{
-                    background-color: #fff;
-                    position: absolute;
-                    width: 200px;
-                    right: 0;
-                    margin-top: 30px;
-                    margin-right: 20px;
-                    padding: 10px 0px 10px 20px;
-                    min-height: 100px;
-                    display: none;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    border-radius: 5px;
-                    >h4{
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                        padding: 10px 2px;
-                        i{
-                            margin-right: 10px;
-                        }
-                        &:hover{
-                            background-color: rgba(0, 0, 0, 0.1);
-                        }
-                    }
-                    >a{
-                        text-decoration: none;
-                    }
-                    >a p{
-                        color: red;
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                        padding: 10px 2px;
-                        >i{
-                            margin-right: 10px;
-                        }
-                          &:hover{
-                            background-color: rgba(0, 0, 0, 0.1);
-                        }
-                    }
-                  }
-                }
-            }
-            >p{
-                padding-top: 25px;
-                color: #134544;
-                >i{
-                    margin-right: 5px;
-                }
-            }
-            >h4{
-                margin-top: 30px;
-                background-color: #fff;
-                width: 100%;
-                padding: 30px;
-                font-size: 1.3rem;
-            }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-            >nav{
-                margin-top: 20px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                >span{
-                    display: block;
-                    background-color: #134544;
-                    width: 45px;
-                    height: 10px;
-                    border-radius: 20px;
-                }
-                >p{
-                    font-size: 1.1rem;
-                }
-            }
-            >li{
-                list-style-type: none;
-                content: #162168;
-                margin-left: 55px;
-                margin-top: 3px;
-                font-size: 14px;
-            }
-            >.container{
-               margin-top: 30px;
-                background-color: #fff;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                h4{
-                    border-bottom: 1px solid grey;
-                    width: 100%;
-                    padding: 25px;
-                    color: #162168;
-                }  
-                >section{
-                    display: flex;
-                    flex-direction: column;
-                    >div{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 1rem;
-                        >aside{
-                            display: flex;
-                            align-items: center;
-                            gap: 1rem;
-                            >img{
-                                width:8% ;
-                                border-radius: 50%;
-                            }
-                            >div{
-                                display: flex;
-                                justify-content: center;
-                                align-items: flex-start;
-                                flex-direction: column;
-                                gap: 0.5rem;
-                                >p{
-                                    font-weight: bold;
-                                }
-                                >small{
-                                    color: gray;
-                                    font-size: 10px;
-                                }
-                            }
-                        }
+#Leaderboard > main {
+    display: flex;
+    flex: 1;
+}
 
-                        >article{
-                            display: flex;
-                            justify-content: space-between;
-                            gap: 3rem;
-                            >aside{
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                flex-direction: column;
-                                h3{
-                                    color: #162168;
-                                }
-                                p{
-                                   color: #34395e;
-                                   font-size: 12px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-       
-        }
-    }
-     >footer{
-                color: #007bff;
-                font-size: 13px;
-                margin-top: 50px;
-                border-top: 1px solid rgb(205, 199, 199);
-                >p{
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    text-align: center;
-                    >span{
-                        padding-right: 5px;
-                        font-size: 1rem;
-                    }
-                }
-            }
+#Leaderboard > main > section {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Top Bar */
+#Leaderboard > main > section > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Leaderboard > main > section > div:first-child > section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#Leaderboard > main > section > div:first-child #search {
+    display: none;
+}
+
+#Leaderboard > main > section > div:first-child > section > i {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* User Dropdown */
+#Leaderboard > main > section > div nav {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+#Leaderboard > main > section > div nav:hover > div {
+    display: flex;
+}
+
+#Leaderboard > main > section > div nav > aside {
+    display: flex;
+    align-items: center;
+}
+
+#Leaderboard > main > section > div nav > aside > img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+#Leaderboard > main > section > div nav > aside > p {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+#Leaderboard > main > section > div nav > aside > p > i {
+    margin-left: 5px;
+}
+
+#Leaderboard > main > section > div nav > div {
+    background-color: #fff;
+    position: absolute;
+    width: 200px;
+    right: 0;
+    top: 100%;
+    margin-top: 10px;
+    padding: 10px 0 10px 20px;
+    min-height: 100px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+#Leaderboard > main > section > div nav > div > h4 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 2px;
+    margin: 0;
+    transition: background-color 0.2s;
+}
+
+#Leaderboard > main > section > div nav > div > h4 > i {
+    margin-right: 10px;
+}
+
+#Leaderboard > main > section > div nav > div > h4:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#Leaderboard > main > section > div nav > div > a {
+    text-decoration: none;
+}
+
+#Leaderboard > main > section > div nav > div > a > p {
+    color: red;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 2px;
+    margin: 0;
+    transition: background-color 0.2s;
+}
+
+#Leaderboard > main > section > div nav > div > a > p > i {
+    margin-right: 10px;
+}
+
+#Leaderboard > main > section > div nav > div > a > p:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Go Back Link */
+#Leaderboard > main > section > p#p {
+    padding-top: 25px;
+    color: #134544;
+    cursor: pointer;
+}
+
+#Leaderboard > main > section > p#p > i {
+    margin-right: 5px;
+}
+
+/* Page Title */
+#Leaderboard > main > section > h4 {
+    margin-top: 30px;
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    font-size: 1.3rem;
+}
+
+/* Section Header with Line */
+#Leaderboard > main > section > nav {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#Leaderboard > main > section > nav > span {
+    display: block;
+    background-color: #134544;
+    width: 45px;
+    height: 10px;
+    border-radius: 20px;
+}
+
+#Leaderboard > main > section > nav > p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Subtitle */
+#Leaderboard > main > section > li {
+    list-style-type: none;
+    color: #162168;
+    margin-left: 55px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Leaderboard Container */
+#Leaderboard > main > section > .container {
+    margin-top: 30px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#Leaderboard > main > section > .container > h4 {
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 25px;
+    color: #162168;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Student Cards Container */
+#Leaderboard > main > section > .container > section {
+    display: flex;
+    flex-direction: column;
+}
+
+#Leaderboard > main > section > .container > section > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#Leaderboard > main > section > .container > section > div:last-child {
+    border-bottom: none;
+}
+
+/* Student Info (Left Side) */
+#Leaderboard > main > section > .container > section > div > aside {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#Leaderboard > main > section > .container > section > div > aside > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#Leaderboard > main > section > .container > section > div > aside > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#Leaderboard > main > section > .container > section > div > aside > div > p {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0;
+    color: #2d3748;
+}
+
+#Leaderboard > main > section > .container > section > div > aside > div > small {
+    color: #a0aec0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Stats (Right Side) */
+#Leaderboard > main > section > .container > section > div > article {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#Leaderboard > main > section > .container > section > div > article > aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+#Leaderboard > main > section > .container > section > div > article > aside > h3 {
+    color: #162168;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#Leaderboard > main > section > .container > section > div > article > aside > p {
+    color: #718096;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Footer */
+#Leaderboard > footer {
+    color: #007bff;
+    font-size: 13px;
+    margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
+}
+
+#Leaderboard > footer > p {
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+#Leaderboard > footer > p > span {
+    padding-right: 5px;
+    font-size: 1rem;
 }
 
 
+@media (max-width: 700px) {
+    #Leaderboard {
+        background-color: #fff;
+    }
+
+    #Leaderboard > main > section {
+        padding: 0;
+    }
+
+
+    #Leaderboard > main > section > div:first-child {
+        background-color: #134544;
+        height: auto;
+        padding: 20px;
+        top: 0;
+        z-index: 100;
+    }
+
+    #Leaderboard > main > section > div:first-child > section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #Leaderboard > main > section > div:first-child > section > i {
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    #Leaderboard > main > section > div:first-child #search {
+        display: block;
+    }
+
+    #Leaderboard > main > section > div nav > aside > p > span {
+        display: none;
+    }
+
+    #Leaderboard > main > section > div nav > aside > p > i {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    #Leaderboard > main > section > div nav > aside > img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Hide Go Back on Mobile */
+    #Leaderboard > main > section > #p {
+        display: none;
+    }
+
+    /* Page Title - Mobile Style */
+    #Leaderboard > main > section > h4 {
+        margin-top: 0;
+        padding: 20px;
+        border-bottom: 1px solid #e5e7eb;
+        background-color: #f3f4f6;
+        font-size: 1.1rem;
+    }
+
+    #Leaderboard > main > section > nav {
+        padding: 15px 20px 10px;
+        margin-top: 0;
+    }
+
+    #Leaderboard > main > section > nav > span {
+        width: 30px;
+        height: 7px;
+    }
+
+    #Leaderboard > main > section > nav > p {
+        color: #3b3d55;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* Subtitle - Mobile */
+    #Leaderboard > main > section > li {
+        margin-bottom: 15px;
+        color: #162168;
+        padding-left: 20px;
+        margin-left: 35px;
+        font-size: 13px;
+    }
+
+    #Leaderboard > main > section > .container {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 500px;
+        border: 1px solid #dee2e6;
+    }
+
+    #Leaderboard > main > section > .container > h4 {
+        padding: 20px;
+        font-size: 1.1rem;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    #Leaderboard > main > section > .container > section > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    #Leaderboard > main > section > .container > section > div > aside {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #Leaderboard > main > section > .container > section > div > aside > img {
+        width: 70px;
+        height: 70px;
+        border: 3px solid #f0f0f0;
+    }
+
+    #Leaderboard > main > section > .container > section > div > aside > div {
+        align-items: center;
+        gap: 6px;
+    }
+
+    #Leaderboard > main > section > .container > section > div > aside > div > p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    #Leaderboard > main > section > .container > section > div > aside > div > small {
+        font-size: 11px;
+        color: #9ca3af;
+    }
+
+    /* Stats - Mobile Horizontal Row */
+    #Leaderboard > main > section > .container > section > div > article {
+        width: 100%;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    #Leaderboard > main > section > .container > section > div > article > aside > h3 {
+        font-size: 24px;
+        color: #162168;
+    }
+
+    #Leaderboard > main > section > .container > section > div > article > aside > p {
+        font-size: 12px;
+        color: #6b7280;
+    }
+
+    #Leaderboard > footer > p {
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+
+.navbar-wrapper {
+    display: contents;
+}
+
+.navbar-overlay {
+    display: none;
+}
+
+/* Mobile Navbar Styles */
+@media (max-width: 700px) {
+    .navbar-wrapper {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .navbar-wrapper.navbar-open {
+        left: 0;
+    }
+
+    .navbar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+}

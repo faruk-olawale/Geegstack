@@ -30,7 +30,6 @@ const Challenges = () => {
 
     return(
         <div id="challenges">
-            {/* Overlay */}
             {isNavbarOpen && (
                 <div 
                     className="navbar-overlay"

@@ -217,17 +217,16 @@
             margin-top: 0;
             padding: 20px;
             border-bottom: 0.5px solid #bfc2d8;
+            background-color: #e5e7eb;
            }
            >nav{
-             padding: 20px;
+             padding-left: 20px;
              padding-bottom: 10px;
             >span{
                 width: 30px;
                 height: 7px;
                 >p{
                     color: #3B3D55;
-                    font-size: 14px;
-                    font-weight: 900;
                 }
             }
            }
@@ -235,7 +234,6 @@
             margin-bottom: 20px;
             color: #162168;
             padding-left: 5px;
-            margin-left: 20px;
            } 
            >aside{
             flex-direction: column;
