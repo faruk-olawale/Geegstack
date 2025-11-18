@@ -38,7 +38,7 @@ function Navbar() {
             </nav>
             </Link>
 
-            <Link to="/Submission">
+            <Link>
             <nav>
                <i class="fa-solid fa-upload"></i>
                <p>My submission</p> 

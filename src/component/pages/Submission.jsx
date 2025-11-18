@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 const Submission = () => {
     const [firstName, setFirstName] = useState("Ismail")
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false)
     
     useEffect(() => {
     const userEmail = localStorage.getItem("userEmail")
@@ -17,17 +18,32 @@ const Submission = () => {
     setFirstName(capitalizedName)
             }
         }, [])
+        const toggleNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen)
+        }
+
+       const closeNavbar = () => {
+        setIsNavbarOpen(false)
+        }  
     
 
 
     return(
         <div id="Quiz">
+            {isNavbarOpen && (
+            <div 
+                className="navbar-overlay"
+                onClick={closeNavbar}
+            ></div>
+             )}
             <main>
-            <Navbar></Navbar>
+             <div className={`navbar-wrapper ${isNavbarOpen ? 'navbar-open' : ''}`}>
+                    <Navbar />
+             </div>
             <section>
                 <div>
                 <section> 
-                <i className="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars" onClick={toggleNavbar}></i>
                 <i className="fa-solid fa-magnifying-glass" id="search"></i> 
                 </section> 
                 <nav>
