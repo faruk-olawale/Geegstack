@@ -7,6 +7,7 @@ import { useState, useEffect } from "react"
 const Project = () => {
 
        const [firstName, setFirstName] = useState("Ismail")
+       const [isNavbarOpen, setIsNavbarOpen] = useState(false)
     
         useEffect(() => {
         const userEmail = localStorage.getItem("userEmail")
@@ -19,18 +20,37 @@ const Project = () => {
                 setFirstName(capitalizedName)
             }
         }, [])
+          const toggleNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen)
+      }
+
+      const closeNavbar = () => {
+        setIsNavbarOpen(false)
+       }
 
     return(
         <div id="Project">
+              {isNavbarOpen && (
+                <div 
+                    className="navbar-overlay"
+                    onClick={closeNavbar}
+                ></div>
+            )}
             <main>
-            <Navbar></Navbar>
+            <div className={`navbar-wrapper ${isNavbarOpen ? 'navbar-open' : ''}`}>
+                    <Navbar />
+                </div>
             <section>
-                <div><i class="fa-solid fa-bars"></i>
+                <div>
+                 <section> 
+                        <i className="fa-solid fa-bars" onClick={toggleNavbar}></i>
+                        <i className="fa-solid fa-magnifying-glass" id="search"></i> 
+                        </section>
                 <nav>
                     <aside>
                         <img src={User} alt="user Profile" />
                         <p>
-                           Hi, {firstName}
+                           <span>Hi, {firstName}</span>
                             <i class="fa-solid fa-caret-down"></i>
                         </p>
                     </aside>
@@ -42,7 +62,7 @@ const Project = () => {
                     </div>
                 </nav>
                 </div>
-                <p><i class="fa-solid fa-arrow-left"></i>Go Back</p>
+                <p id="p"><i className="fa-solid fa-arrow-left"></i>Go Back</p>
                  <h4>Projects</h4>
                  <nav>
                     <span></span>

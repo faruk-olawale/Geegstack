@@ -293,7 +293,7 @@
 
 /* Desktop - navbar wrapper does nothing, just passes through */
 .navbar-wrapper {
-    display: contents; /* This makes the wrapper invisible on desktop */
+    display: contents; 
 }
 
 .navbar-overlay {
@@ -303,7 +303,7 @@
 /* Mobile Navbar Wrapper Styles */
 @media (max-width: 700px) {
     .navbar-wrapper {
-        display: block; /* Enable wrapper on mobile */
+        display: block;
         position: fixed;
         top: 0;
         left: -100%;

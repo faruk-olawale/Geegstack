@@ -257,16 +257,15 @@
     }
 }
 
-/* Desktop - navbar wrapper does nothing, just passes through */
 .navbar-wrapper {
-    display: contents; /* This makes the wrapper invisible on desktop */
+    display: contents; 
 }
 
 .navbar-overlay {
     display: none;
 }
 
-/* Mobile Navbar Wrapper Styles */
+
 @media (max-width: 700px) {
     .navbar-wrapper {
         display: block; /* Enable wrapper on mobile */
@@ -298,5 +297,4 @@
     }
 }
 
-/* Your existing Quiz.css styles below... */
 

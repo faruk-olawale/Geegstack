@@ -30,7 +30,6 @@ const Dashboard = () => {
 
     return(
         <div id="Dashboard">
-            {/* Overlay */}
             {isNavbarOpen && (
                 <div 
                     className="navbar-overlay"
